@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import CharacterIndex from './components/CharacterIndex/CharacterIndexPage/CharacterIndex';
@@ -11,16 +11,6 @@ import './App.css';
 import CharacterFile from './components/CharacterFile/CharacterFile';
 
 const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
-
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
-
   return (
     <div id="demo">
       <React.StrictMode>

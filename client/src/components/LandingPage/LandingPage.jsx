@@ -26,9 +26,9 @@ function LandingPage() {
         </video>
       </div>
       <Carousel />
-      <a href="/game-start">
-        <GameButton className="game-button" />
-      </a>
+      {/* <button calssName="game-button">Test Your Knowledge</button> */}
+
+      <GameButton />
     </div>
   );
 }

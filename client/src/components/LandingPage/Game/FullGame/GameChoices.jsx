@@ -11,8 +11,8 @@ function GameChoices() {
   const [imageThree, setImageThree] = useState();
   const [nameThree, setNameThree] = useState();
   const [quote, setQuote] = useState();
-  const [newQuote, setNewQuote] = useState(false);
-  const [refetch, setRefetch] = useState(false);
+  // const [newQuote, setNewQuote] = useState(false);
+  // const [refetch, setRefetch] = useState(false);
   const [count, setCount] = useState(0);
   const [click, setClick] = useState(0);
   const [score, setScore] = useState(0);

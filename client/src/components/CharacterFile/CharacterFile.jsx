@@ -8,9 +8,9 @@ function CharacterFile(props) {
 
     img: ''
   });
-  const [dataQuote, setDataQuote] = useState({});
+  // const [dataQuote, setDataQuote] = useState({});
 
-  const [aboutMessage, setAboutMessage] = useState({});
+  // const [aboutMessage, setAboutMessage] = useState({});
 
   let characterAboutArray = [
     {
@@ -339,7 +339,7 @@ function CharacterFile(props) {
 
         setDataFiles(characterObject);
       });
-  }, []);
+  });
 
   function goBack() {
     window.history.back();

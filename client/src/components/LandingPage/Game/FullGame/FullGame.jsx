@@ -1,5 +1,5 @@
 import React from 'react';
-import GameStatusBar from './GameStatusBar';
+
 import GameChoices from './GameChoices';
 import './FullGame.css';
 

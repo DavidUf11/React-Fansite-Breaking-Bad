@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+
 import './NavigationBar.css';
 
 function NavigationBar() {
@@ -11,9 +11,9 @@ function NavigationBar() {
           alt="logo"
         />
       </a>
-      <nav class="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg">
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -21,53 +21,28 @@ function NavigationBar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <a className="nav-link" href="/">
                 Home <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="/about-us">
                 Meet The Team
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="game-start">
                 Test Your Knowledge
               </a>
             </li>
           </ul>
         </div>
       </nav>
-
-      {/* <Nav className="navbar" defaultActiveKey="/home" as="ul">
-        <Nav.Item as="li">
-          <Nav.Link className="home" href="/">
-            Home
-          </Nav.Link>
-          <button type="button" class="btn btn-primary">
-            Primary
-          </button>
-        </Nav.Item>
-
-        <Nav.Item as="li">
-          <Nav.Link eventKey="link-1" className="About-Us" href="/About-Us">
-            Meet the Team
-          </Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item as="li">
-          <Nav.Link eventKey="link-3" className="gamestart" href="/game-start">
-            Test Your Knowledge
-          </Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item></Nav.Item>
-      </Nav> */}
     </div>
   );
 }

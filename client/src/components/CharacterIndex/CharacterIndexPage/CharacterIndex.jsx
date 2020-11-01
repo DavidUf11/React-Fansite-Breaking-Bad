@@ -5,19 +5,29 @@ import './CharacterIndex.css';
 const CharacterIndex = () => {
   const [characterList, setCharacterList] = useState([]);
   const [state, setState] = useState(true);
+  const [sorted, setSorted] = useState('');
+  const [filtered, setFiltered] = useState(0);
   const [charactersFiltered, setCharactersFiltered] = useState([]);
 
   const changeSeasonsFilter = (seasonNumber) => {
+    let season = seasonNumber;
     let results = characterList.filter(
       (item) => item.appearance && item.appearance.includes(seasonNumber)
     );
     setCharactersFiltered(results);
+    setFiltered(seasonNumber);
+    setState(!state);
   };
 
   function characterCards(loopVar) {
+    console.log('character cards has run');
     return loopVar.map((character) => {
       return (
-        <a id="card-link-tag" href={`/character-file/${character.char_id}`}>
+        <a
+          key={character.char_id}
+          id="card-link-tag"
+          href={`/character-file/${character.char_id}`}
+        >
           <div id="character-card" className="card">
             <h5 className="card-title">{character.name}</h5>
             <img
@@ -32,39 +42,83 @@ const CharacterIndex = () => {
   }
 
   const displayAllCharacters = () => {
-    characterCards(characterList);
     console.log('displayallchars has run');
+    setCharactersFiltered([]);
+    setFiltered(0);
   };
 
   const sortAToZ = () => {
-    setCharacterList(characterList.sort((a, b) => (a.name > b.name ? 1 : -1)));
-    setState(!state);
+    if (filtered) {
+      setCharactersFiltered(
+        charactersFiltered.sort((a, b) => (a.name > b.name ? 1 : -1))
+      );
+      setSorted('a');
+    } else {
+      setCharacterList(
+        characterList.sort((a, b) => (a.name > b.name ? 1 : -1))
+      );
+
+      setSorted('a');
+    }
   };
 
   const sortZToA = () => {
-    setCharacterList(characterList.sort((a, b) => (a.name > b.name ? -1 : 1)));
-    setState(!state);
+    if (filtered) {
+      setCharactersFiltered(
+        charactersFiltered.sort((a, b) => (a.name > b.name ? -1 : 1))
+      );
+      setSorted('z');
+    } else {
+      setCharacterList(
+        characterList.sort((a, b) => (a.name > b.name ? -1 : 1))
+      );
+
+      setSorted('z');
+    }
   };
 
-  useEffect(async () => {
-    let response = await fetch('https://breakingbadapi.com/api/characters');
-    response = await response.json();
-    let charArray = [];
-    for (let i = 0; i < response.length; i++) {
-      if (
-        response[i].char_id !== 39 &&
-        response[i].char_id !== 117 &&
-        response[i].char_id !== 112 &&
-        response[i].char_id !== 113 &&
-        response[i].char_id !== 114 &&
-        response[i].char_id !== 115 &&
-        response[i].char_id !== 116
-      ) {
-        charArray.push(response[i]);
+  // create state for currentSeasonsFilter; useEffect checks if seasonmsFilter is falsy before running; if truthy,
+  //set characterList to subset
+  // make useEffect run async function only if sorted = "" and filterd = ""
+  // all sorting/filtering functions will toggle "state" variable
+  // useEffect will check firstly for filter, then for state. It will populate an array. then pass that array to characterCards or
+  // new function that will render the cards from that array. Key is to only call the API on mounting. Perhaps I should add a conditional
+  // statement to ensure this.
+  useEffect(() => {
+    console.log('useEffect has run');
+
+    if (sorted) {
+      console.log('sorted');
+      // characterCards(charactersFiltered);
+
+      // if (sorted === 'z') {
+      //   console.log('sorted z to a');
+      // } else if (sorted === 'a') {
+      //   console.log('sorted a to z');
+      // }
+    } else {
+      async function populateCharArray() {
+        let response = await fetch('https://breakingbadapi.com/api/characters');
+        response = await response.json();
+        let charArray = [];
+        for (let i = 0; i < response.length; i++) {
+          if (
+            response[i].char_id !== 39 &&
+            response[i].char_id !== 117 &&
+            response[i].char_id !== 112 &&
+            response[i].char_id !== 113 &&
+            response[i].char_id !== 114 &&
+            response[i].char_id !== 115 &&
+            response[i].char_id !== 116
+          ) {
+            charArray.push(response[i]);
+          }
+        }
+        setCharacterList(charArray);
       }
+      populateCharArray();
     }
-    setCharacterList(charArray);
-  }, []);
+  }, [state]);
 
   return (
     <div className="character-index-page-container">
@@ -84,7 +138,7 @@ const CharacterIndex = () => {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Filter by Season
+            {filtered ? `Season ${filtered}` : 'Filter by Season'}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <button

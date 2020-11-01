@@ -6,6 +6,16 @@ const Carousel = () => {
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
+          <a href="/character-file/2">
+            <img
+              class="homephoto"
+              src="https://images5.fanpop.com/image/photos/31200000/Breaking-Bad-Season-5-Promo-Photos-breaking-bad-31234879-245-350.jpg"
+              alt="Jesse Pinkman"
+            />
+          </a>
+        </div>
+
+        <div class="item ">
           <a href="/character-file/1">
             <img
               class="homephoto"
@@ -21,16 +31,6 @@ const Carousel = () => {
               class="homephoto"
               src="https://compote.slate.com/images/e5e01201-0ca9-48fe-8955-07fe63056dd3.jpg"
               alt="Skyler White"
-            />
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="/character-file/2">
-            <img
-              class="homephoto"
-              src="https://images5.fanpop.com/image/photos/31200000/Breaking-Bad-Season-5-Promo-Photos-breaking-bad-31234879-245-350.jpg"
-              alt="Jesse Pinkman"
             />
           </a>
         </div>
