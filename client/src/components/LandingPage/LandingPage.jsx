@@ -16,8 +16,8 @@ function LandingPage() {
             position: 'absolute',
             width: '100%',
             left: '50%',
-            top: '44rem',
-            height: '45rem',
+            top: '22rem',
+            height: '100vh',
             objectFit: 'cover',
             transform: 'translate(-50%, -50%)'
           }}

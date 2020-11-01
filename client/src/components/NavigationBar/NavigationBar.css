@@ -2,200 +2,46 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background-image: url('https://www.desktopbackground.org/download/1920x1080/2010/07/21/51793_breaking-bad-smoke-backgrounds_2448x2448_h.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-right: 4rem;
 }
 .navbarDiv img {
-  height: 120px;
-  width: 120px;
+  height: 90px;
+  width: 90px;
   position: absolute;
-  left: 10px;
-  border: 2px solid white;
-  border-radius: 25px;
+  z-index: 1;
   padding: 0px;
-  background-color: #0a0809;
-  margin-left: 3rem;
-  margin-top: 3rem;
+  left: 4rem;
+  top: 3rem;
 }
-.home {
-  border: 2px solid white;
-  border-radius: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  padding: 8px 15px;
-  color: white;
-  text-decoration: none;
-  margin-right: 10px;
-  height: 5rem;
-  width: 8rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.home:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2a6322;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  border-radius: 12px;
-}
-.home:hover,
-.home:focus,
-.home:active {
-  color: white;
-}
-.home:hover:before,
-.home:focus:before,
-.home:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-}
-.gamestart {
-  border: 2px solid white;
-  border-radius: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  padding: 8px 15px;
-  color: white;
-  text-decoration: none;
-  height: 5rem;
-  width: 12rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.gamestart:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2a6322;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  border-radius: 12px;
-}
-.gamestart:hover,
-.gamestart:focus,
-.gamestart:active {
-  color: white;
-}
-.gamestart:hover:before,
-.gamestart:focus:before,
-.gamestart:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-}
-.About-Us {
-  border: 2px solid white;
-  border-radius: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  padding: 8px 15px;
-  color: white;
-  text-decoration: none;
-  margin-right: 10px;
-  height: 5rem;
-  width: 15rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.About-Us:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2a6322;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  border-radius: 12px;
-}
-.About-Us:hover,
-.About-Us:focus,
-.About-Us:active {
-  color: white;
-}
-.About-Us:hover:before,
-.About-Us:focus:before,
-.About-Us:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: hsla(100, 50%, 50%, 0);
 }
 
-.About-Us {
-  margin: 2.5rem;
-  margin-right: 3.5rem;
-  margin-left: 3.5rem;
+.collapse {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.gamestart {
-  width: 19rem;
+.navbar a {
+  color: white;
+  transform: scale(1);
+  transition: transform 150ms ease-in 0s;
+}
+
+.navbar a:hover {
+  filter: brightness(150%);
+  transform: scale(1.05);
+  transition: all 150ms ease-in 0s;
+  color: white;
+}
+
+.navbar li {
+  margin-left: 6rem;
+  font-size: 1.75rem;
+  z-index: 1;
 }
