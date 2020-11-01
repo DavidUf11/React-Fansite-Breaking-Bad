@@ -5,7 +5,6 @@ import './CharacterFile.css';
 function CharacterFile(props) {
   const [dataFiles, setDataFiles] = useState({
     name: '',
-
     img: ''
   });
   // const [dataQuote, setDataQuote] = useState({});
@@ -347,34 +346,42 @@ function CharacterFile(props) {
   return (
     <div className="filecontainer">
       <div className="filecard">
-        <div className="cardImage">
-          <img
-            className="characterImageProfile"
-            src={dataFiles.img}
-            alt="character"
-          ></img>
-        </div>
-        <div className="carddata">
-          <div className="leftfilecard">
-            <div id="characterdata">
-              <div className="profileHeader">
-                <h1 className="profileSelector">{dataFiles.name}</h1>
-              </div>
-              <div className="profileDetails">
-                <p className="textSelector" id="name">
-                  Nickname: {dataFiles.nickname}
-                </p>
-                <p className="textSelector" id="portrayed">
-                  Portrated By: {dataFiles.portrayed}
-                </p>
-                <p className="textSelector" id="description">
-                  Description: {characterValue.about}
-                </p>
-                <p className="textSelector" id="status">
-                  Status: {dataFiles.status}
-                </p>
-              </div>
-            </div>
+        <img
+          className="characterImageProfile"
+          src={dataFiles.img}
+          alt="character"
+        />
+        <div className="rightfilecard">
+          <h1 className="profileSelector">{dataFiles.name}</h1>
+          <div className="all-profile-details">
+            {/* <div className="profileDetails keys"> */}
+            <h3 className="textSelector" id="name-key">
+              Nickname:
+            </h3>
+            <h3 className="textSelector" id="portrayed-key">
+              Portrated By:
+            </h3>
+            <h3 className="textSelector" id="description-key">
+              Description:
+            </h3>
+            <h3 className="textSelector" id="status-key">
+              Status:
+            </h3>
+            {/* </div> */}
+            {/* <div className="profileDetails values"> */}
+            <p className="textSelector" id="name-val">
+              {dataFiles.nickname}
+            </p>
+            <p className="textSelector" id="portrayed-val">
+              {dataFiles.portrayed}
+            </p>
+            <p className="textSelector" id="description-val">
+              {characterValue.about}
+            </p>
+            <p className="textSelector" id="status-val">
+              {dataFiles.status}
+            </p>
+            {/* </div> */}
           </div>
         </div>
       </div>

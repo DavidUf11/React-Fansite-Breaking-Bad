@@ -126,10 +126,10 @@ const CharacterIndex = () => {
 
       <div className="buttons-container">
         <div className="alphabetical-sort">
-          <button onClick={() => sortAToZ()}>Sort A → Z</button>
-          <button onClick={() => sortZToA()}>Sort Z → A</button>
+          <button onClick={() => sortAToZ()}> A → Z</button>
+          <button onClick={() => sortZToA()}> Z → A</button>
         </div>
-        <div class="dropdown">
+        <div className="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
             type="button"
@@ -137,6 +137,7 @@ const CharacterIndex = () => {
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
+            // data-offset="100px"
           >
             {filtered ? `Season ${filtered}` : 'Filter by Season'}
           </button>

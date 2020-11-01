@@ -9,7 +9,7 @@
   margin-bottom: 250px;
   height: 700px;
   width: 1500px;
-  border: 7px;
+  border: 7px solid red;
   border-radius: 15px;
   background-color: rgb(2, 20, 2);
 }
@@ -19,44 +19,35 @@
   justify-content: space-around;
   align-content: space-between;
   margin: 0px;
-  padding: 10px;
+  height: 400px;
   width: 1200px;
-  border: 5px solid rgb(2, 20, 2);
+  border: 1px solid white;
   border-radius: 15px;
-  background-color: beige;
+  background-color: white;
 }
-.carddata {
-  background-color: beige;
-  display: flex;
-  justify-content: left;
-}
-.leftfilecard {
+
+.rightfilecard {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-content: left;
-  padding: 25px;
+  align-items: center;
   width: 900px;
+  height: 100%;
 }
-.characterdata {
-  display: flex;
-  justify-content: center;
-  align-content: left;
-  height: 300px;
-  width: 900px;
-}
-.cardImage {
+
+.filecard img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 75px;
+  position: relative;
+  left: -0.1px;
 }
 .textSelector {
   color: black;
   display: flex;
 }
 .profileSelector {
-  color: yellow;
+  color: red;
   font-weight: 500;
   font-size: 25px;
   padding-bottom: 15px;
@@ -72,13 +63,27 @@
   display: flex;
   justify-content: center;
 }
-.profileDetails {
-  padding-top: 15px;
+
+/* .profileDetails.values {
+  border: 1px solid red;
 }
+.profileDetails.keys {
+  border: 1px solid red;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 15px;
+} */
+
 .characterImageProfile {
-  border: 10px solid rgb(2, 20, 2);
-  background-color: rgb(2, 20, 2);
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 100%;
+  width: 30rem;
+  align-self: flex-start;
+  position: relative;
+  left: 1px;
 }
 .backButton {
   background-color: hsla(250, 50%, 50%, 0);
@@ -92,4 +97,58 @@
 .backButtonDiv {
   display: flex;
   justify-content: left;
+}
+
+.all-profile-details {
+  display: grid;
+  grid-template-rows: 4;
+  grid-template-columns: 2;
+}
+
+.all-profile-details * {
+  border: 1px solid red;
+  margin-left: 8rem;
+}
+
+#name-key {
+  grid-row: 1;
+  grid-column: 1;
+  margin-top: 6rem;
+}
+#name-val {
+  grid-row: 1;
+  grid-column: 2;
+  margin-top: 6rem;
+}
+
+#portrayed-key {
+  grid-row: 2;
+  grid-column: 1;
+}
+#portrayed-val {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#description-key {
+  grid-row: 3;
+  grid-column: 1;
+}
+#description-val {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+#status-key {
+  grid-row: 4;
+  grid-column: 1;
+}
+#status-val {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
 }
