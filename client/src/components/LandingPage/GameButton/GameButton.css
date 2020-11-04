@@ -6,8 +6,8 @@
 .game-button button {
   background-color: hsla(100, 50%, 10%, 0);
   font-size: 1.75rem;
-  width: 36rem;
-  height: 6rem;
+  width: 35rem;
+  height: 5.5rem;
   color: white;
   transition: all 100ms ease-in 0ms;
   border-radius: 5px;

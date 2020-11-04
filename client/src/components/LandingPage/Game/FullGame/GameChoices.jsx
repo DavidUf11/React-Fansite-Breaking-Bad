@@ -91,7 +91,7 @@ function GameChoices() {
     }
   };
   return (
-    <div>
+    <div className="full-game-container">
       <h2 className="who-said">Who said...</h2>
       <div className="game-status-bar">
         <p className="quote-box">

@@ -24,8 +24,7 @@ h1 {
   font-weight: 300;
   text-transform: uppercase;
 }
-
-.teammates:hover {
+* .teammates:hover {
   text-decoration: none;
 }
 
@@ -35,13 +34,13 @@ h1 {
   font-style: bold;
 }
 
-p {
+/* p {
   color: white;
-  font-family: 'Varela Round', sans-serif;
+  /* font-family: 'Varela Round', sans-serif; 
   font-size: 26px;
   font-weight: 100;
   margin: 0 auto 20px auto;
-}
+}  */
 
 nav ul {
   display: flex;
@@ -50,15 +49,15 @@ nav ul {
   padding: 1rem;
   justify-content: space-evenly;
 }
-
+/*
 p {
   color: white;
-  font-family: 'Varela Round', sans-serif;
+  /* font-family: 'Varela Round', sans-serif; 
   font-size: 15px;
   font-weight: bold;
   margin: auto;
   width: 80%;
-}
+} */
 
 img {
   height: 250px;

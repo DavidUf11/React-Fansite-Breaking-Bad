@@ -1,30 +1,24 @@
 import React from 'react';
-
+import { useHistory } from 'react-router-dom';
+import poster from '../../../Images/Breaking_Bad-Season_2_Walt_Jesse.jpg';
 import './GameStart.css';
 
 const GameStart = () => {
+  const history = useHistory();
+
   return (
-    <div class="gamestarts-page">
-      <div class="gamestarts">
-        <h1 class="title">Test Your Knowledge</h1>
+    <div className="all-page-contents">
+      <img src={poster} alt="Breaking Bad Season 2 Poster" id="poster" />
 
-        <div class="startquiz">
-          <h2>Game Rules</h2>
-
-          <div class="rulesbox">
-            <ol class>
-              <li>You are given 4 characters.</li>
-              <li>Click on the character the quote applies to.</li>
-              <li>Each player is only allowed 2 wrong answers.</li>
-              <li>Try to reach the highest score!</li>
-            </ol>
-          </div>
-          <div class="box">
-            <a href="/lets-play" class="startgame">
-              START
-            </a>
-          </div>
-        </div>
+      <div class="game-rules-container">
+        <h2 class="title">Breaking Bad Quote Quiz</h2>
+        <p>Rules Go Here</p>
+        <button
+          onClick={() => history.push('/lets-play')}
+          id="game-start-button"
+        >
+          Start Game
+        </button>
       </div>
     </div>
   );

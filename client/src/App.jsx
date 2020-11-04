@@ -26,7 +26,7 @@ const App = () => {
             />
             <Route exact path="/game-start" component={GameStart} />
             <Route exact path="/lets-play" component={GameChoices} />
-            <Route exact path="/About-Us" component={AboutUs} />
+            <Route exact path="/about-us" component={AboutUs} />
           </Switch>{' '}
         </BrowserRouter>
       </React.StrictMode>

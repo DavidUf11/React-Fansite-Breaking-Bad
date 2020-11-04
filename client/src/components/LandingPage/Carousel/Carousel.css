@@ -31,3 +31,7 @@
 .carousel-control {
   background-image: none;
 }
+
+.item img:hover {
+  cursor: pointer;
+}

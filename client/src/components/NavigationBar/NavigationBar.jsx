@@ -1,42 +1,40 @@
 import React from 'react';
-
+import { useHistory } from 'react-router-dom';
 import './NavigationBar.css';
 
 function NavigationBar() {
+  const history = useHistory();
   return (
     <div className="navbarDiv" id="myHeader">
-      <a href="/">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/0/03/Radiation_warning_symbol.png"
-          alt="logo"
-        />
-      </a>
+      <img
+        onClick={() => history.push('/')}
+        src="https://upload.wikimedia.org/wikipedia/commons/0/03/Radiation_warning_symbol.png"
+        alt="logo"
+      />
+
       <nav className="navbar navbar-expand-lg">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="/">
+              <a
+                onClick={() => history.push('/')}
+                className="nav-link"
+                href="/"
+              >
                 Home <span class="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about-us">
+              <a onClick={() => history.push('/about-us')} className="nav-link">
                 Meet The Team
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="game-start">
+              <a
+                onClick={() => history.push('/game-start')}
+                className="nav-link"
+                href="game-start"
+              >
                 Test Your Knowledge
               </a>
             </li>

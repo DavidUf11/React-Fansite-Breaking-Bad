@@ -15,6 +15,11 @@
   left: 4rem;
   top: 3rem;
 }
+
+.navbarDiv img:hover {
+  cursor: pointer;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -38,10 +43,15 @@
   transform: scale(1.05);
   transition: all 150ms ease-in 0s;
   color: white;
+  cursor: pointer;
 }
 
 .navbar li {
   margin-left: 6rem;
   font-size: 1.75rem;
   z-index: 1;
+}
+
+#character-card:hover {
+  cursor: pointer;
 }

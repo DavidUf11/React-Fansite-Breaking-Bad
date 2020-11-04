@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './CharacterIndex.css';
 
@@ -8,6 +9,8 @@ const CharacterIndex = () => {
   const [sorted, setSorted] = useState('');
   const [filtered, setFiltered] = useState(0);
   const [charactersFiltered, setCharactersFiltered] = useState([]);
+
+  const history = useHistory();
 
   const changeSeasonsFilter = (seasonNumber) => {
     let season = seasonNumber;
@@ -26,7 +29,7 @@ const CharacterIndex = () => {
         <a
           key={character.char_id}
           id="card-link-tag"
-          href={`/character-file/${character.char_id}`}
+          onClick={() => history.push(`/character-file/${character.char_id}`)}
         >
           <div id="character-card" className="card">
             <h5 className="card-title">{character.name}</h5>

@@ -5,13 +5,9 @@
   align-items: center;
   padding: 5px;
   position: absolute;
-  margin-top: 200px;
-  margin-bottom: 250px;
+  margin-top: 10rem;
   height: 700px;
   width: 1500px;
-  border: 7px solid red;
-  border-radius: 15px;
-  background-color: rgb(2, 20, 2);
 }
 .filecard {
   display: flex;
@@ -29,10 +25,12 @@
 .rightfilecard {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
   width: 900px;
   height: 100%;
+
+  padding: 2rem;
 }
 
 .filecard img {
@@ -46,18 +44,11 @@
   color: black;
   display: flex;
 }
-.profileSelector {
-  color: red;
+.character-title {
+  color: #021402;
   font-weight: 500;
-  font-size: 25px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  background-color: rgb(2, 20, 2);
-  border: 5px solid rgb(2, 20, 2);
-  border-radius: 10px;
-  width: 700px;
-  display: flex;
-  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 .profileHeader {
   display: flex;
@@ -103,22 +94,30 @@
   display: grid;
   grid-template-rows: 4;
   grid-template-columns: 2;
+
+  margin-top: 2rem;
 }
 
-.all-profile-details * {
-  border: 1px solid red;
-  margin-left: 8rem;
+.all-profile-details h3 {
+  margin-left: 4rem;
+  margin-right: 3rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.all-profile-details p {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-right: 4rem;
 }
 
 #name-key {
   grid-row: 1;
   grid-column: 1;
-  margin-top: 6rem;
 }
 #name-val {
   grid-row: 1;
   grid-column: 2;
-  margin-top: 6rem;
 }
 
 #portrayed-key {
@@ -150,5 +149,7 @@
 
 .flexbox {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+
+  height: 55%;
 }

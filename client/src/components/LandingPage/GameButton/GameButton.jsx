@@ -1,13 +1,15 @@
 import React from 'react';
-
+import { useHisory, useHistory } from 'react-router-dom';
 import './GameButton.css';
 
 function GameButton() {
+  const history = useHistory();
+
   return (
     <div className="game-button-div game-button">
-      <a href="/game-start">
-        <button>Test Your Breaking Bad Knowledge</button>
-      </a>
+      <button onClick={() => history.push('/game-start')}>
+        Test Your Breaking Bad Knowledge
+      </button>
     </div>
   );
 }
