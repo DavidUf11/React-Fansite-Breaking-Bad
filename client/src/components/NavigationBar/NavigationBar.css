@@ -55,3 +55,7 @@
 #character-card:hover {
   cursor: pointer;
 }
+
+.active-nav-link {
+  color: hotpink;
+}

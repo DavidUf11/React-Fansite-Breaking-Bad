@@ -1,37 +1,30 @@
-.Us {
-  background-color: rgb(0, 8, 0);
+.team-members {
   margin: 30px auto;
   padding: 0px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  border-radius: 15px;
+  padding: 2rem;
 }
 
-.the-team {
-  background-color: rgb(4, 27, 4);
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px;
+.about-us-page {
+  margin-top: 5rem;
+}
+
+.about-us-page h1 {
+  font-size: 3rem;
 }
 
 h1 {
   color: White;
-  font-family: 'Oswald', sans-serif;
-  font-size: 32px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-* .teammates:hover {
-  text-decoration: none;
+  text-align: center;
 }
 
-.teammates {
-  color: white;
-  font-size: 15px;
-  font-style: bold;
+.team-members h5 {
+  color: #021402;
+  font-size: 2rem;
+  position: relative;
+  bottom: 0.4rem;
 }
 
 /* p {
@@ -59,42 +52,9 @@ p {
   width: 80%;
 } */
 
-img {
-  height: 250px;
-  width: 200px;
-}
-
-.the-team img {
-  height: 38rem;
-  width: 32rem;
-  border-radius: 10px;
-  box-shadow: 0px 0px 0px 0px white;
-  transition: all 150ms ease-in 0s;
-  margin: 2rem;
-}
-.the-team img:hover {
-  height: 38rem;
-  width: 32rem;
-  border-radius: 10px;
-  box-shadow: 0px 0px 6px 2.5px white;
-  transition: all 150ms ease-in 0s;
-  margin: 2rem;
-}
-
-.the-team a:hover {
-  color: white;
-}
-.the-team a:focus {
-  color: white;
-  text-decoration: none;
-}
-
-.the-team p {
-  font-size: 2rem;
-}
-
-nav {
-  border-bottom: 1px solid black;
+.team-members .card {
+  height: 36rem;
+  width: 26rem;
 }
 
 @media only screen and (max-width: 950px) {

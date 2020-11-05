@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import poster from '../../../Images/Breaking_Bad-Season_2_Walt_Jesse.jpg';
+import poster from '../../../../Images/Breaking_Bad-Season_2_Walt_Jesse.jpg';
 import './GameStart.css';
 
 const GameStart = () => {

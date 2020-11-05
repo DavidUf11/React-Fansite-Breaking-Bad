@@ -46,6 +46,7 @@
   padding: 0;
   /* top: 3rem; */
   filter: brightness(110%);
+  height: 87%;
 }
 
 .card-title {
@@ -53,7 +54,7 @@
 }
 
 .card:hover {
-  box-shadow: 2px 2px 7px white;
+  box-shadow: 2px 2px 6px -1px white;
   transition: all 150ms ease-in 0ms;
 }
 
@@ -61,11 +62,7 @@
   color: #021402;
   font-size: 1.6rem;
   position: relative;
-  bottom: 0.4rem;
-}
-
-h1 {
-  font-family: 'Roboto', sans-serif;
+  bottom: 0.2rem;
 }
 
 #card-link-tag:hover {

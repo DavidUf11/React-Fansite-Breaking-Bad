@@ -1,40 +1,47 @@
 import React from 'react';
 import './AboutUs.css';
-import christian from '../Images/christianb.jpg';
-import david from '../Images/david.jpg';
-import rita from '../Images/rita.jpg';
-import oscar from '../Images/oscar.jpg';
+import christian from '../../Images/christianb.jpg';
+import david from '../../Images/david.jpg';
+import rita from '../../Images/rita.jpg';
+import oscar from '../../Images/oscar.jpg';
+import { useHistory } from 'react-router-dom';
 
 const AboutUs = () => {
+  const history = useHistory();
   return (
-    <div class="Us">
+    <div className="about-us-page">
       <h1>Meet The Team</h1>
-      <ul class="the-team">
-        <li>
-          <a className="teammates" href="https://github.com/christianmbonet">
-            <img src={christian} alt="Christian Bonet" />
-            <p>Christian Bonet</p>
-          </a>
-        </li>
-        <li>
-          <a className="teammates" href="https://github.com/DavidUf11">
-            <img src={david} alt="David Ufberg" />
-            <p>David Ufberg</p>
-          </a>
-        </li>
-        <li>
-          <a className="teammates" href="https://github.com/oscarporfer">
-            <img src={oscar} alt="Oscar Portes" />
-            <p>Oscar Portes</p>
-          </a>
-        </li>
-        <li>
-          <a className="teammates" href="https://github.com/ritamwaikinda">
-            <img src={rita} alt="Rita Mwaikinda" />
-            <p>Rita Mwaikinda</p>
-          </a>
-        </li>
-      </ul>
+
+      <div className="team-members">
+        <a id="card-link-tag" href="https://github.com/christianmbonet">
+          <div id="character-card" className="card">
+            <h5 className="card-title">Christian Bonet</h5>
+            <img
+              src={christian}
+              className="card-img-top"
+              alt="Christian Bonet"
+            />
+          </div>
+        </a>
+        <a id="card-link-tag" href="https://github.com/DavidUf11">
+          <div id="character-card" className="card">
+            <h5 className="card-title">David Ufberg</h5>
+            <img src={david} className="card-img-top" alt="David Ufberg" />
+          </div>
+        </a>
+        <a id="card-link-tag" href="https://github.com/oscarporfer">
+          <div id="character-card" className="card">
+            <h5 className="card-title">Oscar Portes</h5>
+            <img src={oscar} className="card-img-top" alt="Oscar Portes" />
+          </div>
+        </a>
+        <a id="card-link-tag" href="https://github.com/ritamwaikinda">
+          <div id="character-card" className="card">
+            <h5 className="card-title">Rita Mwaikinda</h5>
+            <img src={rita} className="card-img-top" alt="Rita Mwaikinda" />
+          </div>
+        </a>
+      </div>
     </div>
   );
 };

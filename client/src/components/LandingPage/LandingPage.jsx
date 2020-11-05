@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from './Carousel/Carousel';
 import GameButton from './GameButton/GameButton';
 import './LandingPage.css';
-import video from '../Images/video.mp4';
+import video from '../../Images/video.mp4';
 
 function LandingPage() {
   return (
