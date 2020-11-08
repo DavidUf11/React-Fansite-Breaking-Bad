@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHisory, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './GameButton.css';
 
 function GameButton() {
