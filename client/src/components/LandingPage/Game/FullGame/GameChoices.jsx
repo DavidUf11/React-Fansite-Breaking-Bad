@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
 function GameChoices() {
+  //rewrite Rita's code to make this less repetitive
   const [image, setImage] = useState();
   const [name, setName] = useState();
   const [imageOne, setImageOne] = useState();
@@ -94,61 +95,62 @@ function GameChoices() {
     <div className="full-game-container">
       <h2 className="who-said">Who said...</h2>
       <div className="game-status-bar">
-        <p className="quote-box">
-          <em>"{quote}"</em>
-        </p>
+        <div className="quote-div">
+          <p className="quote">
+            <em>"{quote}"</em>
+          </p>
+        </div>
+
         <div className="score-box">
-          <h1>Score:</h1>
+          <h2>Score</h2>
           <span className="score-number"> {score} </span>
         </div>
       </div>
       <div className="game-options-container">
         <div className="options-row options-one">
-          <button
-            className="game-option option-one"
-            onClick={handleAnswerOptionClick}
-          >
-            <h3>{answer[0][0]}</h3>
-            <img
-              src={answer[0][1]}
-              alt="random character from Breaking Bad for user to select from"
-            />
-          </button>
-          <button
-            type="submit"
-            className="game-option option-two"
-            onClick={handleAnswerOptionClick}
-          >
-            <h3>{answer[1][0]}</h3>
-            <img
-              src={answer[1][1]}
-              alt="random character from Breaking Bad for user to select from"
-            />
-          </button>
+          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
+            <div id="character-card" className="card card-for-game">
+              <h5 className="card-title">{answer[0][0]}</h5>
+              <img
+                src={answer[0][1]}
+                className="card-img-top"
+                alt={answer[0][0]}
+              />
+            </div>
+          </a>
+          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
+            <div id="character-card" className="card card-for-game">
+              <h5 className="card-title">{answer[1][0]}</h5>
+              <img
+                src={answer[1][1]}
+                className="card-img-top"
+                alt={answer[1][0]}
+              />
+            </div>
+          </a>
         </div>
         <div className="options-row options-three">
-          <button
-            type="submit"
-            className="game-option option-one"
-            onClick={handleAnswerOptionClick}
-          >
-            <h3>{answer[2][0]}</h3>
-            <img
-              src={answer[2][1]}
-              alt="random character from Breaking Bad for user to select from"
-            />
-          </button>
-          <button
-            type="submit"
-            className="game-option option-four"
-            onClick={handleAnswerOptionClick}
-          >
-            <h3>{answer[3][0]}</h3>
-            <img
-              src={answer[3][1]}
-              alt="random character from Breaking Bad for user to select from"
-            />
-          </button>
+          {' '}
+          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
+            <div id="character-card" className="card card-for-game">
+              <h5 className="card-title">{answer[2][0]}</h5>
+              <img
+                src={answer[2][1]}
+                className="card-img-top"
+                alt={answer[2][0]}
+              />
+            </div>
+          </a>
+          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
+            <div id="character-card" className="card card-for-game">
+              <h5 className="card-title">{answer[3][0]}</h5>
+              <img
+                src={answer[3][1]}
+                className="card-img-top"
+                alt={answer[3][0]}
+              />
+            </div>
+          </a>
         </div>
       </div>
     </div>
