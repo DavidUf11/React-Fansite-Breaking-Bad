@@ -79,16 +79,16 @@ function GameChoices() {
     event.preventDefault();
     console.log(event.currentTarget.innerText);
     if (event.currentTarget.innerText === name) {
-      swal('Right!');
+      swal('Right!', { icon: 'success' });
       setScore(score + 1);
       setCount(0);
       setClick(click + 1);
     } else {
-      swal('Wrong!');
+      swal('Wrong!', { icon: 'error' });
       setCount(count + 1);
       setClick(click + 1);
       if (count === 3) {
-        swal('Game Over!');
+        swal('Game Over!', { icon: 'error' });
         window.location = '/game-start';
       }
     }
