@@ -12,7 +12,7 @@ const GameStart = () => {
 
       <div class="game-rules-container">
         <h2 class="title">Breaking Bad Quote Quiz</h2>
-        <p>Rules to be added here</p>
+        <p>Rules go here</p>
         <button
           onClick={() => history.push('/lets-play')}
           id="game-start-button"
