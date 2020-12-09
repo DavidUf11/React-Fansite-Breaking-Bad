@@ -1,7 +1,3 @@
-###### c39_midterm_christian_david_rita_oscar
-
-Hi - Welcome to The Felina Web Application
-
 ## What
 
 This web application is designed to be an entertaining, interactive resource for anyone who considers themselves to be a fan of the AMC Network TV show - Breaking Bad. This application provides users with statistics, context, and entertainment at the same time.
