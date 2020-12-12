@@ -77,7 +77,6 @@ function GameChoices() {
   });
   const handleAnswerOptionClick = (event) => {
     event.preventDefault();
-    console.log(event.currentTarget.innerText);
     if (event.currentTarget.innerText === name) {
       swal('Right!', { icon: 'success' });
       setScore(score + 1);
