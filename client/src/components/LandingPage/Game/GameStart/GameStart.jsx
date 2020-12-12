@@ -11,8 +11,21 @@ const GameStart = () => {
       <img src={poster} alt="Breaking Bad Season 2 Poster" id="poster" />
 
       <div class="game-rules-container">
-        <h2 class="title">Breaking Bad Quote Quiz</h2>
-        <p>Rules go here</p>
+        <h1 class="title">Breaking Bad Quote Quiz</h1>
+        <p style={{ fontSize: '2rem', marginTop: '6rem', textAlign: 'center' }}>
+          You'll be presented with a random quote from the show — choose the
+          character that said it!
+        </p>
+        <br />
+        <p
+          style={{
+            fontSize: '2rem',
+            marginBottom: '6rem',
+            textAlign: 'center'
+          }}
+        >
+          If you miss two in a row it's game over.
+        </p>
         <button
           onClick={() => history.push('/lets-play')}
           id="game-start-button"

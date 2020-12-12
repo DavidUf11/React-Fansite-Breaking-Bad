@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
 import swal from 'sweetalert';
+import { useHistory } from 'react-router-dom';
 
 function GameChoices() {
   //rewrite Rita's code to make this less repetitive
@@ -22,6 +23,8 @@ function GameChoices() {
   let randomQuote;
   let randomAuthor;
   let author;
+
+  const history = useHistory();
 
   useEffect(() => {
     fetch('https://breakingbadapi.com/api/quote/random')
@@ -119,12 +122,15 @@ function GameChoices() {
       setCount(0);
       setClick(click + 1);
     } else {
-      swal('Nope!', { icon: 'error' });
+      swal("Wrong! Don't miss the next one!", {
+        icon: 'error'
+      });
       setCount(count + 1);
       setClick(click + 1);
-      if (count === 3) {
-        swal(`Game over! Your final score is ${score}`, { icon: 'warning' });
-        window.location = '/game-start';
+      if (count === 1) {
+        swal(`Game over! Your final score: ${score}`, {
+          icon: 'warning'
+        }).then(history.push('/game-start'));
       }
     }
   };
