@@ -28,17 +28,28 @@ function GameChoices() {
       .then((response) => response.json())
       .then((data) => {
         randomQuote = data[0].quote;
-        if (data[0].author === 'Gus Fring') {
-          randomAuthor = 'Gustavo Fring';
-        }
-        if (data[0].author === 'Jimmy McGill') {
-          randomAuthor = 'Saul Goodman';
-        }
-        if (data[0].author === 'Kim Wexler') {
-          randomAuthor = 'Kimberly Wexler';
-        }
-        if (data[0].author === 'Chuck McGill') {
-          randomAuthor = 'Charles McGill';
+        if (
+          data[0].author === 'Gus Fring' ||
+          data[0].author === 'Jimmy McGill' ||
+          data[0].author === 'Kim Wexler' ||
+          data[0].author === 'Chuck McGill' ||
+          data[0].author === 'Hank Schrader'
+        ) {
+          if (data[0].author === 'Gus Fring') {
+            randomAuthor = 'Gustavo Fring';
+          }
+          if (data[0].author === 'Jimmy McGill') {
+            randomAuthor = 'Saul Goodman';
+          }
+          if (data[0].author === 'Kim Wexler') {
+            randomAuthor = 'Kimberly Wexler';
+          }
+          if (data[0].author === 'Chuck McGill') {
+            randomAuthor = 'Charles McGill';
+          }
+          if (data[0].author === 'Hank Schrader') {
+            randomAuthor = 'Henry Schrader';
+          }
         } else randomAuthor = data[0].author;
         let stringArray = randomAuthor.split(' ');
         author = stringArray[0] + '+' + stringArray[1];
@@ -103,16 +114,16 @@ function GameChoices() {
   const handleAnswerOptionClick = (event) => {
     event.preventDefault();
     if (event.currentTarget.innerText === name) {
-      swal('Right!', { icon: 'success' });
+      swal('Correct!', { icon: 'success' });
       setScore(score + 1);
       setCount(0);
       setClick(click + 1);
     } else {
-      swal('Wrong!', { icon: 'error' });
+      swal('Nope!', { icon: 'error' });
       setCount(count + 1);
       setClick(click + 1);
       if (count === 3) {
-        swal('Game Over!', { icon: 'error' });
+        swal(`Game over! Your final score is ${score}`, { icon: 'warning' });
         window.location = '/game-start';
       }
     }
