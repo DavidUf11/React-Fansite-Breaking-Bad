@@ -28,9 +28,13 @@ function CharacterFile(props) {
         'Skyler White is the widow of Walter White and the sister of Marie Schrader. Skyler cares for Walter very much, but their marriage becomes increasingly strained due to his unexplained absences and bizarre behavior, ultimately leading to their separation.'
     },
     {
-      charID: 5,
+      charID: 4,
       about:
         "Walter Hartwell 'Flynn' White Jr. is Walter and Skyler's seventeen year-old son, and the older brother of Holly. He attends J. P. Wynne High School, where his father used to work as a high school chemistry teacher."
+    },
+    {
+      charID: 5,
+      about: `Henry R. "Hank" Schrader was the husband of Marie Schrader (the sister of Skyler White) and Assistant Special Agent in Charge (ASAC) of the Albuquerque office of the Drug Enforcement Administration. A high-energy and boisterous man, Hank was Walter White's brother-in-law.`
     },
     {
       charID: 6,

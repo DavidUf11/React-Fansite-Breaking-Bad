@@ -28,16 +28,27 @@ function GameChoices() {
       .then((response) => response.json())
       .then((data) => {
         randomQuote = data[0].quote;
-        randomAuthor = data[0].author;
+        if (data[0].author === 'Gus Fring') {
+          randomAuthor = 'Gustavo Fring';
+        }
+        if (data[0].author === 'Jimmy McGill') {
+          randomAuthor = 'Saul Goodman';
+        }
+        if (data[0].author === 'Kim Wexler') {
+          randomAuthor = 'Kimberly Wexler';
+        }
+        if (data[0].author === 'Chuck McGill') {
+          randomAuthor = 'Charles McGill';
+        } else randomAuthor = data[0].author;
         let stringArray = randomAuthor.split(' ');
         author = stringArray[0] + '+' + stringArray[1];
         setQuote(data[0].quote);
         fetch(`https://breakingbadapi.com/api/characters?name=${author}`)
           .then((response) => response.json())
           .then((data) => {
-            setImage(data[0].img);
-            setName(data[0].name);
-            let name = data[0].name;
+            setImage(data[0]?.img);
+            setName(data[0]?.name);
+            // let name = data[0].name;
           });
       })
       .then(
@@ -45,7 +56,7 @@ function GameChoices() {
           .then((random) => random.json())
           .then((randomdata) => {
             setNameOne(randomdata[0].name);
-            setImageOne(randomdata[0].img);
+            setImageOne(randomdata[0]?.img);
           })
       )
       .then(
@@ -53,7 +64,7 @@ function GameChoices() {
           .then((randomone) => randomone.json())
           .then((randomdataone) => {
             setNameTwo(randomdataone[0].name);
-            setImageTwo(randomdataone[0].img);
+            setImageTwo(randomdataone[0]?.img);
           })
       )
       .then(
@@ -61,9 +72,23 @@ function GameChoices() {
           .then((randomtwo) => randomtwo.json())
           .then((randomdatatwo) => {
             setNameThree(randomdatatwo[0].name);
-            setImageThree(randomdatatwo[0].img);
+            setImageThree(randomdatatwo[0]?.img);
           })
       );
+    console.log(
+      'correct: ',
+      name,
+      image,
+      '1: ',
+      nameOne,
+      imageOne,
+      '2: ',
+      nameTwo,
+      imageTwo,
+      '3: ',
+      nameThree,
+      imageThree
+    );
   }, [click]);
   let answer;
   answer = [
@@ -109,8 +134,12 @@ function GameChoices() {
       </div>
       <div className="game-options-container">
         <div className="options-row options-one">
-          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
-            <div id="character-card" className="card card-for-game">
+          <a id="card-link-tag">
+            <div
+              id="character-card"
+              className="card card-for-game"
+              onClick={handleAnswerOptionClick}
+            >
               <h5 className="card-title">{answer[0][0]}</h5>
               <img
                 src={answer[0][1]}
@@ -119,8 +148,12 @@ function GameChoices() {
               />
             </div>
           </a>
-          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
-            <div id="character-card" className="card card-for-game">
+          <a id="card-link-tag">
+            <div
+              id="character-card"
+              className="card card-for-game"
+              onClick={handleAnswerOptionClick}
+            >
               <h5 className="card-title">{answer[1][0]}</h5>
               <img
                 src={answer[1][1]}
@@ -132,8 +165,12 @@ function GameChoices() {
         </div>
         <div className="options-row options-three">
           {' '}
-          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
-            <div id="character-card" className="card card-for-game">
+          <a id="card-link-tag">
+            <div
+              id="character-card"
+              className="card card-for-game"
+              onClick={handleAnswerOptionClick}
+            >
               <h5 className="card-title">{answer[2][0]}</h5>
               <img
                 src={answer[2][1]}
@@ -142,8 +179,12 @@ function GameChoices() {
               />
             </div>
           </a>
-          <a id="card-link-tag" onClick={handleAnswerOptionClick}>
-            <div id="character-card" className="card card-for-game">
+          <a id="card-link-tag">
+            <div
+              id="character-card"
+              className="card card-for-game"
+              onClick={handleAnswerOptionClick}
+            >
               <h5 className="card-title">{answer[3][0]}</h5>
               <img
                 src={answer[3][1]}

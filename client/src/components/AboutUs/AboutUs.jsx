@@ -13,7 +13,11 @@ const AboutUs = () => {
       <h1>Meet The Team</h1>
 
       <div className="team-members">
-        <a id="card-link-tag" href="https://github.com/christianmbonet">
+        <a
+          id="card-link-tag"
+          href="https://github.com/christianmbonet"
+          target="_blank"
+        >
           <div id="character-card" className="card">
             <h5 className="card-title">Christian Bonet</h5>
             <img
@@ -23,19 +27,31 @@ const AboutUs = () => {
             />
           </div>
         </a>
-        <a id="card-link-tag" href="https://github.com/DavidUf11">
+        <a
+          id="card-link-tag"
+          href="https://github.com/DavidUf11"
+          target="_blank"
+        >
           <div id="character-card" className="card">
             <h5 className="card-title">David Ufberg</h5>
             <img src={david} className="card-img-top" alt="David Ufberg" />
           </div>
         </a>
-        <a id="card-link-tag" href="https://github.com/oscarporfer">
+        <a
+          id="card-link-tag"
+          href="https://github.com/oscarporfer"
+          target="_blank"
+        >
           <div id="character-card" className="card">
             <h5 className="card-title">Oscar Portes</h5>
             <img src={oscar} className="card-img-top" alt="Oscar Portes" />
           </div>
         </a>
-        <a id="card-link-tag" href="https://github.com/ritamwaikinda">
+        <a
+          id="card-link-tag"
+          href="https://github.com/ritamwaikinda"
+          target="_blank"
+        >
           <div id="character-card" className="card">
             <h5 className="card-title">Rita Mwaikinda</h5>
             <img src={rita} className="card-img-top" alt="Rita Mwaikinda" />
