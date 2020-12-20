@@ -1,15 +1,13 @@
-## What
+## Felina
 
-This web application is designed to be an entertaining, interactive resource for anyone who considers themselves to be a fan of the AMC Network TV show - Breaking Bad. This application provides users with statistics, context, and entertainment at the same time.
+A Wyncode midterm project, Felina is a web app that allows fans of the AMC TV series _Breaking Bad_ explore their favorite characters and test their knowledge of the show.
 
-## Why
 
-This project as a work of passion. The developers are all huge fans of the TV show Breaking Bad and wanted to provide a character background and fun facts for anyone who visited their application. In developing application, the developers realize the potential for City and entertainment the fan site and decided to expand on both aspects.
-
-## Who
+## Contributors
 
 Who We Are:
 [Rita Mwaikinda](https://github.com/ritamwaikinda)
+</br>
 [David Ufberg](https://github.com/DavidUf11)
 [Christian Bonet](https://github.com/christianmbonet)
 [Oscar Portes](https://github.com/oscarporfer)
