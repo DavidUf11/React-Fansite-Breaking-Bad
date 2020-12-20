@@ -3,9 +3,11 @@
 A Wyncode midterm project, Felina is a web app that allows fans of the AMC TV series _Breaking Bad_ explore their favorite characters and test their knowledge of the show.
 
 
+## Technologies Used
+- React
+
 ## Contributors
 
-</br>
 [Rita Mwaikinda](https://github.com/ritamwaikinda)
 </br>
 [David Ufberg](https://github.com/DavidUf11)
