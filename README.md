@@ -6,6 +6,8 @@ A Wyncode midterm project, Felina is a web app that allows fans of the AMC TV se
 ## Technologies Used
 - React
   - React Router Dom
+ - Node.js
+ - Express
 
 ## Contributors
 
