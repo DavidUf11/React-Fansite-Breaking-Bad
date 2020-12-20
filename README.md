@@ -11,7 +11,7 @@ A Wyncode midterm project, Felina is a web app that allows fans of the AMC TV se
 - Bootstrap
 - Sweetalert
 
-## Contributors
+## Development Team
 
 [Rita Mwaikinda](https://github.com/ritamwaikinda)
 </br>
