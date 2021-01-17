@@ -23,7 +23,6 @@ const CharacterIndex = () => {
   };
 
   function characterCards(loopVar) {
-    console.log('character cards has run');
     return loopVar.map((character) => {
       return (
         <a
