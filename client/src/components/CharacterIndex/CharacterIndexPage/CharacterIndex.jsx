@@ -44,7 +44,6 @@ const CharacterIndex = () => {
   }
 
   const displayAllCharacters = () => {
-    console.log('displayallchars has run');
     setCharactersFiltered([]);
     setFiltered(0);
   };
@@ -87,17 +86,7 @@ const CharacterIndex = () => {
   // new function that will render the cards from that array. Key is to only call the API on mounting. Perhaps I should add a conditional
   // statement to ensure this.
   useEffect(() => {
-    console.log('useEffect has run');
-
     if (sorted) {
-      console.log('sorted');
-      // characterCards(charactersFiltered);
-
-      // if (sorted === 'z') {
-      //   console.log('sorted z to a');
-      // } else if (sorted === 'a') {
-      //   console.log('sorted a to z');
-      // }
     } else {
       async function populateCharArray() {
         let response = await fetch('https://breakingbadapi.com/api/characters');
